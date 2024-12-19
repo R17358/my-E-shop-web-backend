@@ -8,7 +8,7 @@ const cors = require("cors")
 
 
 app.use(cors({
-  origin: "https://my-e-shop-web-frontend-q7p12mx6w-r17358s-projects.vercel.app/", // allow only your frontend origin
+  origin: "https://my-e-shop-web-frontend.vercel.app/", // allow only your frontend origin
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,               // allow cookies if needed
 }));
