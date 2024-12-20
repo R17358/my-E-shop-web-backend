@@ -7,8 +7,8 @@ const sendToken = (user, statusCode, res) => {
   // Options for cookie
   const options = {
     expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
-    httpOnly: true, // Prevents JavaScript access to cookies
-    secure: process.env.NODE_ENV === "production", // Only send cookies over HTTPS in production
+    // httpOnly: true, // Prevents JavaScript access to cookies
+    // secure: process.env.NODE_ENV === "production", // Only send cookies over HTTPS in production
     sameSite: "None", // Necessary for cross-site cookies (CORS)
   };
 
