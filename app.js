@@ -7,7 +7,12 @@ const path = require("path");
 const cors = require("cors")
 
 
-app.use(cors());
+app.use(cors({
+  origin: "https://my-e-shop-web-frontend.vercel.app", // allow only your frontend origin
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,               // allow cookies if needed
+  allowedHeaders: ['Content-Type', 'Authorization', 'Cookie']
+}));
 
 
 const errorMiddleware = require("./middleware/error");
