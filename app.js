@@ -11,7 +11,7 @@ app.use(cors({
   origin: "https://my-e-shop-web-frontend.vercel.app", // allow only your frontend origin
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,               // allow cookies if needed
-  allowedHeaders: ['Content-Type', 'Authorization', 'Cookie']
+  allowedHeaders: ['Content-Type', 'Authorization', 'Cookie',  'withCredentials'],
 }));
 
 
