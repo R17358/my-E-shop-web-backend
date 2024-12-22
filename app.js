@@ -14,7 +14,7 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 
 // Middleware
 app.use(cors({
-  origin: "https://my-e-shop-web-frontend.vercel.app",
+  origin: "https://my-e-shop-web-frontend.vercel.app", //http://localhost:5173/
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
