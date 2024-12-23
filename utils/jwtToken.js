@@ -9,9 +9,9 @@ const sendToken = (user, statusCode, res) => {
     expires: new Date(
       Date.now() + 15 * 24 * 60 * 60 * 1000  //process.env.COOKIE_EXPIRE
     ),
-    httpOnly: true,
+    httpOnly: flase,
     secure: process.env.NODE_ENV === "PRODUCTION", // Secure cookies in production
-    sameSite: process.env.NODE_ENV === "PRODUCTION" ? "None" : "Lax",
+    sameSite: process.env.NODE_ENV === "PRODUCTION" ? "none" : "Lax",
   };
 
   res.status(statusCode).cookie("token", token, options).json({
